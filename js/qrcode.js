@@ -109,9 +109,12 @@ function generatePayload() {
     const CR = '\x0D';
     let payload = '#<HPRTSetting>';
 
-    for (const f of selectedFields) {
-        if (!f.name) continue;
-        payload += `#$${f.name}$@${f.value}${ESC}`;
+    const validFields = selectedFields.filter((f) => f.name);
+    for (let i = 0; i < validFields.length; i++) {
+        payload += `#$${validFields[i].name}$@${validFields[i].value}`;
+        if (i < validFields.length - 1) {
+            payload += ESC;
+        }
     }
 
     if (payload === '#<HPRTSetting>') return '';
