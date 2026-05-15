@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>常用工具箱</title>
-    <link rel="stylesheet" href="css/style.css?v=8">
-    <link rel="manifest" href="manifest.json?v=8">
+    <link rel="stylesheet" href="css/style.css?v=9">
+    <link rel="manifest" href="manifest.json?v=9">
     <meta name="theme-color" content="#4f46e5">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧰</text></svg>">
 </head>
@@ -19,6 +19,7 @@
         <header class="header">
             <h1>🧰 常用工具箱</h1>
             <p>秒表 · 计时器 · 计数器 · 进制转换 · 二维码生成</p>
+            <p class="version">版本 <span id="version">加载中...</span></p>
         </header>
 
         <nav class="tool-grid">
@@ -45,7 +46,10 @@
         </nav>
     </div>
 
+    <script src="js/version.js"></script>
     <script>
+        document.getElementById('version').textContent = VERSION;
+
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('./sw.js').then((reg) => {

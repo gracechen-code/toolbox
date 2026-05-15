@@ -50,6 +50,13 @@ body {
     color: var(--text-secondary);
 }
 
+.version {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
 .tool-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

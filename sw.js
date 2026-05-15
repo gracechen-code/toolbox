@@ -1,4 +1,4 @@
-const CACHE_NAME = 'toolbox-v8';
+const CACHE_NAME = 'toolbox-v9';
 const ASSETS = [
     './',
     './index.html',
@@ -12,7 +12,8 @@ const ASSETS = [
     './js/timer.js',
     './js/counter.js',
     './js/hex-ascii.js',
-    './js/qrcode.js'
+    './js/qrcode.js',
+    './js/version.js'
 ];
 
 self.addEventListener('install', (e) => {
