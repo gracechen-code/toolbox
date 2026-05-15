@@ -84,7 +84,14 @@ window.removeField = function(index) {
 presetBtns.addEventListener('click', (e) => {
     if (e.target.classList.contains('preset-btn')) {
         const field = e.target.dataset.field;
-        addField(field);
+        const index = selectedFields.findIndex((f) => f.name === field);
+        if (index !== -1) {
+            selectedFields.splice(index, 1);
+            saveSelectedFields();
+            renderSelectedFields();
+        } else {
+            addField(field);
+        }
     }
 });
 
