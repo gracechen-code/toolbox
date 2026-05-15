@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计数器 - 工具箱</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="../index.html" class="back-btn">←</a>
+            <h2>🔢 计数器</h2>
+        </header>
+
+        <div class="btn-group" style="margin-bottom: 16px;">
+            <button class="btn btn-primary" id="addCounterBtn">+ 新建计数器</button>
+        </div>
+
+        <div id="counters"></div>
+    </div>
+
+    <div class="modal-overlay" id="addModal">
+        <div class="modal">
+            <h3>新建计数器</h3>
+            <div class="input-group">
+                <label>计数器名称</label>
+                <input type="text" class="input" id="counterName" placeholder="例如：俯卧撑">
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" id="cancelAdd">取消</button>
+                <button class="btn btn-primary" id="confirmAdd">创建</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="../js/counter.js"></script>
+</body>
+</html>

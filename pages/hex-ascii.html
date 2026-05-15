@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>十六进制 ↔ ASCII - 工具箱</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="../index.html" class="back-btn">←</a>
+            <h2>🔄 十六进制 ↔ ASCII</h2>
+        </header>
+
+        <div class="card">
+            <div class="input-group">
+                <label>ASCII 文本</label>
+                <textarea class="textarea" id="asciiInput" placeholder="输入 ASCII 文本，例如：Hello"></textarea>
+            </div>
+
+            <div class="btn-group" style="margin: 16px 0;">
+                <button class="btn btn-primary" id="toHexBtn">ASCII → 十六进制</button>
+                <button class="btn btn-primary" id="toAsciiBtn">十六进制 → ASCII</button>
+                <button class="btn btn-outline" id="clearBtn">清空</button>
+            </div>
+
+            <div class="input-group">
+                <label>十六进制</label>
+                <textarea class="textarea" id="hexInput" placeholder="输入十六进制，例如：48 65 6C 6C 6F"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3 style="margin-bottom: 12px; color: var(--text-secondary);">常用转换参考</h3>
+            <div class="list">
+                <div class="list-item">
+                    <span class="list-item-title">0-9</span>
+                    <span class="list-item-meta">30-39</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-item-title">A-Z</span>
+                    <span class="list-item-meta">41-5A</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-item-title">a-z</span>
+                    <span class="list-item-meta">61-7A</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-item-title">空格</span>
+                    <span class="list-item-meta">20</span>
+                </div>
+                <div class="list-item">
+                    <span class="list-item-title">换行 (LF)</span>
+                    <span class="list-item-meta">0A</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="../js/hex-ascii.js"></script>
+</body>
+</html>

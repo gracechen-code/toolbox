@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计时器 - 工具箱</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="../index.html" class="back-btn">←</a>
+            <h2>⏳ 计时器</h2>
+        </header>
+
+        <div id="notificationBanner" class="notification-banner" style="display: none;">
+            <span>开启通知以接收计时器提醒</span>
+            <button class="btn" onclick="requestNotification()">开启</button>
+        </div>
+
+        <div class="card">
+            <div class="timer-inputs" id="timerInputs">
+                <div class="input-group">
+                    <input type="number" class="input" id="hours" min="0" max="99" value="0" placeholder="时">
+                    <label>时</label>
+                </div>
+                <span>:</span>
+                <div class="input-group">
+                    <input type="number" class="input" id="minutes" min="0" max="59" value="5" placeholder="分">
+                    <label>分</label>
+                </div>
+                <span>:</span>
+                <div class="input-group">
+                    <input type="number" class="input" id="seconds" min="0" max="59" value="0" placeholder="秒">
+                    <label>秒</label>
+                </div>
+            </div>
+
+            <div class="display" id="display">00:05:00</div>
+
+            <div class="btn-group">
+                <button class="btn btn-success" id="startBtn">开始</button>
+                <button class="btn btn-warning" id="pauseBtn" disabled>暂停</button>
+                <button class="btn btn-danger" id="resetBtn" disabled>重置</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="../js/timer.js"></script>
+</body>
+</html>

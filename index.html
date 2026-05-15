@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常用工具箱</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4f46e5">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧰</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🧰 常用工具箱</h1>
+            <p>秒表 · 计时器 · 计数器 · 进制转换 · 物品管理</p>
+        </header>
+
+        <nav class="tool-grid">
+            <a href="pages/stopwatch.html" class="tool-card">
+                <div class="tool-icon">⏱️</div>
+                <div class="tool-name">秒表</div>
+            </a>
+            <a href="pages/timer.html" class="tool-card">
+                <div class="tool-icon">⏳</div>
+                <div class="tool-name">计时器</div>
+            </a>
+            <a href="pages/counter.html" class="tool-card">
+                <div class="tool-icon">🔢</div>
+                <div class="tool-name">计数器</div>
+            </a>
+            <a href="pages/hex-ascii.html" class="tool-card">
+                <div class="tool-icon">🔄</div>
+                <div class="tool-name">十六进制 ↔ ASCII</div>
+            </a>
+            <a href="pages/inventory.html" class="tool-card">
+                <div class="tool-icon">📦</div>
+                <div class="tool-name">物品管理</div>
+            </a>
+        </nav>
+    </div>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('../sw.js');
+            });
+        }
+    </script>
+</body>
+</html>

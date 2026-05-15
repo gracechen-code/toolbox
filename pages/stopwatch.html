@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秒表 - 工具箱</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <a href="../index.html" class="back-btn">←</a>
+            <h2>⏱️ 秒表</h2>
+        </header>
+
+        <div class="display" id="display">00:00.000</div>
+
+        <div class="btn-group">
+            <button class="btn btn-success" id="startBtn">开始</button>
+            <button class="btn btn-warning" id="lapBtn" disabled>圈速</button>
+            <button class="btn btn-danger" id="resetBtn" disabled>复位</button>
+        </div>
+
+        <div class="card" style="margin-top: 20px;">
+            <h3 style="margin-bottom: 12px; color: var(--text-secondary);">圈速记录</h3>
+            <div id="laps">
+                <div class="empty-state">
+                    <div class="empty-state-icon">📝</div>
+                    <p>暂无圈速记录</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="noteModal">
+        <div class="modal">
+            <h3>添加备注</h3>
+            <div class="input-group">
+                <label>圈速备注</label>
+                <input type="text" class="input" id="noteInput" placeholder="输入备注...">
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-outline" id="cancelNote">取消</button>
+                <button class="btn btn-primary" id="saveNote">保存</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <script src="../js/stopwatch.js"></script>
+</body>
+</html>
